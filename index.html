@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Chord Creator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Beautiful Chord Creator</h1>
+        <div class="chord-generator">
+            <label for="rootNote">Select Root Note:</label>
+            <select id="rootNote">
+                <!-- Root Note Options -->
+            </select>
+            
+            <label for="chordType">Choose Chord Type:</label>
+            <select id="chordType">
+                <!-- Chord Type Options -->
+            </select>
+            
+            <button id="generateChordBtn">Generate Chord</button>
+            <button id="downloadMidiBtn" style="display: none;">Download MIDI</button>
+        </div>
+
+        <div id="chordResult" class="chord-result">
+            <p>Select a root note and chord type, then click "Generate Chord" to see the result!</p>
+        </div>
+
+        <div id="chordRecommendation" class="chord-recommendation">
+            <!-- Chord Recommendations Will Appear Here -->
+        </div>
+    </div>
+    <script src="https://unpkg.com/@tonejs/midi"></script>
+    <script src="script.js"></script>
+</body>
+</html>
