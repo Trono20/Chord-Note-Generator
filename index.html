@@ -3,36 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beautiful Chord Creator</title>
+    <title>Chord Finder</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Beautiful Chord Creator</h1>
-        <div class="chord-generator">
-            <label for="rootNote">Select Root Note:</label>
-            <select id="rootNote">
-                <!-- Root Note Options -->
-            </select>
-            
-            <label for="chordType">Choose Chord Type:</label>
-            <select id="chordType">
-                <!-- Chord Type Options -->
-            </select>
-            
-            <button id="generateChordBtn">Generate Chord</button>
-            <button id="downloadMidiBtn" style="display: none;">Download MIDI</button>
-        </div>
+    <header class="header">
+        <h1>Chord Finder</h1>
+        <p>Your ultimate guide to chords and notes</p>
+    </header>
 
-        <div id="chordResult" class="chord-result">
-            <p>Select a root note and chord type, then click "Generate Chord" to see the result!</p>
-        </div>
+    <section class="intro">
+        <h2>What are Chords?</h2>
+        <p>Chords are a combination of two or more notes played together. They are the building blocks of harmony in music.</p>
+    </section>
 
-        <div id="chordRecommendation" class="chord-recommendation">
-            <!-- Chord Recommendations Will Appear Here -->
-        </div>
-    </div>
-    <script src="https://unpkg.com/@tonejs/midi"></script>
+    <section class="notes">
+        <h2>What are Notes?</h2>
+        <p>Notes are the individual sounds of music, represented by symbols on a musical staff. Each note has a specific pitch and duration.</p>
+    </section>
+
+    <section class="about-chords">
+        <h2>About Chords</h2>
+        <p>Chords provide the harmonic foundation of a song. Understanding chords is essential for composing, playing, and analyzing music.</p>
+    </section>
+
+    <section class="chord-uses">
+        <h2>Uses of Chords</h2>
+        <p>Chords are used to accompany melodies, create texture, and set the mood of a piece. Different chords evoke different emotions.</p>
+    </section>
+
+    <section class="chord-tips">
+        <h2>Best Tricks for Using Chords</h2>
+        <p>Learn to identify chord progressions, practice switching between chords smoothly, and experiment with different voicings to add variety to your music.</p>
+    </section>
+
+    <section class="music-theory">
+        <h2>Music Theory in Chords</h2>
+        <p>Music theory helps explain how chords are constructed and how they function within a piece of music. Understanding theory can enhance your ability to create and interpret music.</p>
+    </section>
+
+    <section class="chord-finder">
+        <h2>Find Your Chords</h2>
+        <label for="note-select">Choose a Note:</label>
+        <select id="note-select">
+            <option value="C">C</option>
+            <option value="C#">C# / Db</option>
+            <option value="D">D</option>
+            <option value="D#">D# / Eb</option>
+            <option value="E">E</option>
+            <option value="F">F</option>
+            <option value="F#">F# / Gb</option>
+            <option value="G">G</option>
+            <option value="G#">G# / Ab</option>
+            <option value="A">A</option>
+            <option value="A#">A# / Bb</option>
+            <option value="B">B</option>
+        </select>
+
+        <label for="chord-select">Choose a Chord:</label>
+        <select id="chord-select">
+            <option value="major">Major</option>
+            <option value="minor">Minor</option>
+            <option value="diminished">Diminished</option>
+            <option value="augmented">Augmented</option>
+            <option value="maj7">Major 7th</option>
+            <option value="min7">Minor 7th</option>
+            <option value="dom7">Dominant 7th</option>
+            <option value="dim7">Diminished 7th</option>
+            <option value="aug7">Augmented 7th</option>
+        </select>
+
+        <button id="find-Notes">Find Chord</button>
+        <div id="chord-result"></div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Chord Finder. All Rights Reserved.</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
