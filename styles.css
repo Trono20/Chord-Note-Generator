@@ -1,165 +1,78 @@
-/* Body Styling */
-body {
-    font-family: 'Roboto', sans-serif;
-    background: linear-gradient(to right, #8e44ad, #3498db);
-    color: #fff;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('music-background.jpg');
+    background-size: cover;
+    color: #fff;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
-    overflow: hidden;
 }
 
-/* Container Styling */
-.container {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 30px;
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+.header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
     text-align: center;
-    max-width: 400px;
     width: 100%;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.container:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+section {
+    background: rgba(0, 0, 0, 0.6);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    transition: transform 0.3s;
 }
 
-/* Heading Styling */
-h1 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #f1c40f;
-    letter-spacing: 1.5px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+section:hover {
+    transform: scale(1.05);
 }
 
-/* Chord Generator Form */
-.chord-generator {
-    margin-bottom: 20px;
-}
-
-label {
-    display: block;
-    margin: 15px 0 5px;
-    font-weight: bold;
-    color: #ecf0f1;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+h2 {
+    color: #ffcc00;
+    margin-bottom: 10px;
 }
 
 select, button {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    border: 1px solid #fff;
-    font-size: 16px;
-    background: rgba(255, 255, 255, 0.3);
-    color: #fff;
-    outline: none;
-    transition: background-color 0.3s ease, border 0.3s ease;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
 }
 
-/* Select Dropdown Styling */
-select {
-    background: rgba(255, 255, 255, 0.2);
-    color: #ecf0f1;
-}
-
-select:focus {
-    border-color: #f39c12;
-    background: rgba(255, 255, 255, 0.4);
-}
-
-/* Button Styling */
 button {
-    background-color: #f39c12;
-    color: #fff;
+    background-color: #ffcc00;
+    color: #000;
     cursor: pointer;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #e67e22;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    background-color: #ffaa00;
 }
 
-button:active {
-    background-color: #d35400;
-    transform: translateY(0);
+.footer {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    text-align: center;
+    width: 100%;
 }
 
-/* Chord Result Display */
-.chord-result {
+#chord-result {
     margin-top: 20px;
-    padding: 15px;
-    font-size: 18px;
-    font-weight: bold;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
-    border: 1px solid #ecf0f1;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    animation: fadeIn 1s;
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
-    .container {
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 24px;
-    }
-
-    select, button {
-        padding: 10px;
-        font-size: 14px;
-    }
-
-    .chord-result {
-        font-size: 16px;
-    }
-}
-
-/* Dark Mode Enhancement */
-@media (prefers-color-scheme: dark) {
-    body {
-        background: linear-gradient(to right, #2c3e50, #2980b9);
-    }
-
-    .container {
-        background: rgba(0, 0, 0, 0.4);
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
-    }
-
-    h1 {
-        color: #f39c12;
-    }
-
-    label {
-        color: #bdc3c7;
-    }
-
-    select, button {
-        background: rgba(255, 255, 255, 0.2);
-        color: #bdc3c7;
-    }
-
-    .chord-result {
-        background: rgba(0, 0, 0, 0.4);
-        color: #bdc3c7;
-        border-color: #bdc3c7;
-    }
-
-⇝h1{
-  animation-name: flex-direction: ;
-}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
